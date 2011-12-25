@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS3 Daft Punk LEDs</title>
+		<meta name="description" content="Daft Punk LEDs using CSS3" />	
+		<meta name="keywords" content="css3, daft punk, justin schwinghamer, jpschwinghamer" />
+		<meta name="author" content="jpschwinghamer.com">
+		<link rel="stylesheet" type="text/css" href="css/led.css">
+	</head>
+	<body>
+		<section class="lights">
+			<div class="purple light"></div>
+			<div class="dark-blue light"></div>
+			<div class="lt-blue light"></div>
+			<div class="green light"></div>
+			<div class="yellow light"></div>
+			<div class="orange light"></div>
+			<div class="red light"></div>
+			<div class="orange light"></div>
+			<div class="yellow light"></div>
+			<div class="green light"></div>
+			<div class="lt-blue light"></div>
+			<div class="dark-blue light"></div>
+			<div class="purple light"></div>
+			<div class="dark-blue light"></div>
+			<div class="lt-blue light"></div>
+			<div class="green light"></div>
+			<div class="yellow light"></div>
+			<div class="orange light"></div>
+			<div class="red light"></div>
+			<div class="orange light"></div>
+			<div class="yellow light"></div>
+			<div class="green light"></div>
+			<div class="lt-blue light"></div>
+			<div class="dark-blue light"></div>
+		</section>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" type="text/javascript">
+			$(document).ready(function(){
+				window.setTimeout(function(){
+					$('body').css({'margin-top': window.innerHeight * 0.25});
+					$('.light').css({height: window.innerHeight/2}).addClass('on');
+					$('.lights').css({opacity: 1})				
+				}, 200)
+
+				var i = 0;
+				$('.light').each(function(){
+					this.style.webkitAnimationDelay= 1.0625 * i + 's';
+					i++;
+				})
+				
+				window.setInterval(function(){
+					var pattern = Math.random();
+					$('.light').each(function(){
+						this.style.webkitAnimationDuration = pattern + 0.2 + 's';
+						console.log(pattern)
+					})
+				}, 3000)
+			})
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-2792457-7']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})
+			();
+		</script>	
+	</body>
+</html>
