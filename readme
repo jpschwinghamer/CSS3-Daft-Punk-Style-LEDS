@@ -1,5 +1,7 @@
 Howdy
 
+TL;DR: http://bit.ly/tDfwMa
+
 This is a quick POC to see if I could replicate the look of the the Daft Punk helmet LEDs.  As such, I was only concerned with the performance in modern Webkit browsers.  The patterns morph organically as the result of randomizing the webkit animation duration property.  Sweeping camera-style animation achieved by animating the rotation property on light container.  
 
 Put some Daft Punk on and watch the bars dance.
